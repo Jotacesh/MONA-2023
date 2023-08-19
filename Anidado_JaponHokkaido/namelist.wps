@@ -1,0 +1,79 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 2,
+ start_date = '2023-03-30_00:00:00','2023-03-30_00:00:00' 
+ end_date   = '2023-04-02_18:00:00','2023-04-02_18:00:00'
+ interval_seconds = 3600,
+ io_form_geogrid = 2,
+ opt_output_from_geogrid_path = '/media/data1/alumno02/Japon_Anidado/',
+ debug_level = 0,
+/
+
+&geogrid
+ parent_id         = 1,1,
+ parent_grid_ratio = 1,5,
+ i_parent_start    = 1,41,
+ j_parent_start    = 1,36,
+ e_we              = 101,121,
+ e_sn              = 101,121,
+ geog_data_res = '10m','5m',
+ dx = 25000,
+ dy = 25000,
+ map_proj =  'lambert',
+ ref_lat   = 44,
+ ref_lon   = 142,
+ truelat1  = 44,
+ truelat2  = 44,
+ stand_lon = 142,
+ geog_data_path = '/data/home/mona/Build_WRF/WPS_GEOG',
+ opt_geogrid_tbl_path = '/media/data1/alumno02/Japon_Anidado/',
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'FILE',
+/
+
+&metgrid
+ fg_name = 'FILE',
+ io_form_metgrid = 2,
+ opt_output_from_metgrid_path = '/media/data1/alumno02/Japon_Anidado',
+ opt_metgrid_tbl_path = '/media/data1/alumno02/Japon_Anidado',
+/
+
+&mod_levs
+ press_pa = 201300 , 200100 , 100000 ,
+             95000 ,  90000 ,
+             85000 ,  80000 ,
+             75000 ,  70000 ,
+             65000 ,  60000 ,
+             55000 ,  50000 ,
+             45000 ,  40000 ,
+             35000 ,  30000 ,
+             25000 ,  20000 ,
+             15000 ,  10000 ,
+              5000 ,   1000
+ /
+
+
+&domain_wizard
+ grib_data_path = 'null',
+ grib_vtable = 'Vtable.GFS',
+ dwiz_name    =Japon_Anidado
+ dwiz_desc    =
+ dwiz_user_rect_x1 =465
+ dwiz_user_rect_y1 =634
+ dwiz_user_rect_x2 =661
+ dwiz_user_rect_y2 =785
+ dwiz_show_political =true
+ dwiz_center_over_gmt =true
+ dwiz_latlon_space_in_deg =10
+ dwiz_latlon_linecolor =-8355712
+ dwiz_map_scale_pct =12.5
+ dwiz_map_vert_scrollbar_pos =297
+ dwiz_map_horiz_scrollbar_pos =172
+ dwiz_gridpt_dist_km =27.0
+ dwiz_mpi_command =null
+ dwiz_tcvitals =null
+ dwiz_bigmap =Y
+/
